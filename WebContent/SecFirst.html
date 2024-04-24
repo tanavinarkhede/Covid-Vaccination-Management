@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.background{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* opacity: 0; */
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.alert_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) ;
+    max-width: 450px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 5;
+}
+.alert_box .icon{
+  height: 100px;
+  width: 100px;
+  color: green;
+  border: 3px solid green;
+  border-radius: 50%;
+  line-height: 110px;
+  font-size: 50px;
+}
+.fa, .fas {
+    font-weight: 900;
+    margin: 18;
+}
+.alert_box header{
+  font-size: 35px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.alert_box p{
+  font-size: 20px;
+}
+.alert_box .btns{
+  margin-top: 20px;
+}
+.btns input{
+  display: inline-flex;
+  height: 55px;
+  padding: 0 30px;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 55px;
+  outline: none;
+  margin: 0 10px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.btns button{
+  display: inline-flex;
+  height: 55px;
+  padding: 0 30px;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 55px;
+  outline: none;
+  margin: 0 10px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+#btn{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+}
+.btns input:first-child{
+  background: #2980b9;
+}
+.btns input:first-child:hover{
+  background: #2573a7;
+}
+.btns button:last-child{
+  background: #f23b26;
+}
+.btns button:last-child:hover{
+  background: #d9210d;
+}
+</style>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Not Vaccinated</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   </head>
+<body>
+<form action="view">
+    <div class="container">
+      <div class="background"></div>
+      <div class="alert_box">
+        <div class="icon">
+          <i class="fas fa-exclamation"></i>
+        </div>
+        <header>Not Vaccinated</header>
+        <p>You not completed your Second Dose please Take 2nd Dose First !!!</p>
+        <div class="btns">
+          <button type="button" ><a id="btn" href="Login.html">Go For Vaccination</a></button>
+          <button type="button" ><a id="btn" href="index.html">Go To Home Page</a></button>
+        </div>
+      </div>
+    </div>
+    </form>
+</body>
+</html>

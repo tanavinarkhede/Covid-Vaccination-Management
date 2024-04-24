@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(Reg.jpg);
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+.contactForm{
+    width: 40%;
+    padding: 20px;
+    margin-right:550px;
+    background: rgb(253, 252, 252);
+}
+.contactForm h2{
+    font-size: 30px;
+    color: rgb(5, 5, 5);
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input 
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .gender{
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"],
+.contactForm .inputBox input[type="reset"]
+{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width: 991px)
+{
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    
+    .container .contactForm
+    {
+        width: 100%;
+    }
+}
+
+</style>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" >
+</head>
+
+<body>
+    <form action="Register">
+        <section class="contact" >
+            <div class="container">
+                <div class="contactForm">
+                    <form>
+                        <h2><b>Registration</b></h2>
+                        <div class="inputBox">
+                            <input type="text" name="name" required="required">
+                            <span>Enter Full Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="email" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox" id="bd">
+                            <input type="date" name="dob" required="required">
+                        </div>
+                        <div class="gender">
+                            <br> Gender: <br><br>
+                            &nbsp &nbsp <input type="radio" name="gender" value="Male"> Male
+                            &nbsp <input type="radio" name="gender" value="Female"> Female
+                            &nbsp <input type="radio" name="gender" value="other"> Other<br>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="city" required="required">
+                            <span>City</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="aadhar" required="required">
+                            <span>Aadhar</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="mob" required="required">
+                            <span>Mobile No</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" name="password" required="required">
+                            <span>Password</span>
+                        </div>
+                        
+                        <div class="inputBox">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </form>
+</body>
+
+</html>
